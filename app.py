@@ -51,6 +51,7 @@ def predict():
     print(final)
     final = final.reshape(1,-1)
     prediction=(int)(model.predict(final))
+    print(Dictionary[prediction])
     return render_template('index.html',pred = "Cultivation of {} is Suitable for your Land".format(Dictionary[prediction]))
 
 
